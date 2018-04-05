@@ -80,10 +80,10 @@ export class NewsComponent implements OnInit, OnDestroy {
 
       this.spinnerService.hide();
 
-      console.log(this.recentNews);
-      this.recentNews.forEach(element => {
-        console.log(element.multimedia.length);
-      });
+      // console.log(this.recentNews);
+      // this.recentNews.forEach(element => {
+        // console.log(element.multimedia.length);
+      // });
   })
   }
 

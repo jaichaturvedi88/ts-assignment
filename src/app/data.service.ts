@@ -18,7 +18,7 @@ export class DataService {
       search = `&q=${searchQuery}`
     if (page)
       search += `&page=${page}`
-    console.log(this.url + search);
+    // console.log(this.url + search);
     return this.http.get(this.url + search)
           .catch(function (err: Response) {
             console.log('Fetch Error :-S', err.json());

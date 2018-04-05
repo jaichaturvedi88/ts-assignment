@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
   newsDetails;
-
+  title: string;
   closeBtnName: string;
   list: any[] = [];
 
