@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="m-1 row">
+    <div class="input-group mb-3">
+      <input type="text" class="col-10 col-lg-10" placeholder="Search a topic" [(ngModel)]="searchQuery" aria-label="Recipient's username"
+        aria-describedby="basic-addon2" (keydown.Enter) = "getNews($event)">
+      <button type="button" class="col-2 col-lg-2 btn btn-secondary" (click)="getNews($event)">Search</button>
+    </div>
+  </div>
+</div>
+<hr>
+
+<div class="container d-flex flex-wrap col-md-12 col-lg-12">
+  <div class="p-2 col-md-6 col-lg-3" *ngFor="let newsItem of recentNews" (click)="openModalWithComponent($event, newsItem)">
+    <div class="card">
+      <img class="card-img-top" *ngIf="newsItem.multimedia.length > 1" src="https://static01.nyt.com/{{newsItem.multimedia[0]?.url}}" alt="{{newsItem.multimedia[0]?.url}}">
+      <img class="card-img-top" *ngIf="!(newsItem.multimedia.length > 1)" src="assets/images/nytimes-logo.jpg" alt="{{newsItem.multimedia[0]?.url}}">
+      <div class="card-body">
+        <h5 class="card-title">{{newsItem.headline.main}}</h5>
+        <p class="m-2 snippet card-text">{{newsItem.snippet}}</p>
+        <p class="muted d-flex justify-content-end card-text">
+          <small class="text-muted">{{newsItem.source}}, {{newsItem.pub_date |date}}</small>
+        </p>
+      </div>
+      <div class="read-more">
+        <button type="button" class="btn btn-secondary btn-block" (click)="openModalWithComponent($event, newsItem)">read more</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container d-flex justify-content-center">
+  <div class="row">
+    <div class="col-xs-12 col-12">
+      <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" [maxSize]="maxSize" [itemsPerPage]="itemsPerPage" [boundaryLinks]="showBoundaryLinks"
+        (pageChanged)="pageChanged($event)">
+
+      </pagination>
+    </div>
+  </div>
+</div>

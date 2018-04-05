@@ -1,0 +1,20 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{title}}</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="card" style="width: 18rem;" *ngIf="newsDetails">
+    <img class="card-img-top" src="https://static01.nyt.com/{{newsDetails.multimedia[0]?.url}}" alt="{{newsDetails.multimedia[0]?.url}}">
+      <div class="card-body">
+        <p class="card-text">{{newsDetails.snippet}}</p>
+        <p class="card-text"><small class="text-muted">{{newsDetails.source}}, {{newsDetails.pub_date |date}}</small></p>
+      </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
+</div>
+
+
