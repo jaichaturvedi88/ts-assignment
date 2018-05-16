@@ -1,3 +1,5 @@
+# Link to hosted project
+https://jaichaturvedi88.github.io/ts-assignment/news
 # Ts
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
