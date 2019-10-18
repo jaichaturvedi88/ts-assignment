@@ -1,6 +1,6 @@
 # Link to hosted project
 https://jaichaturvedi88.github.io/ts-assignment/news
-# Ts
+
 
 This project was generated for an interview purpose
 
