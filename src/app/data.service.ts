@@ -6,7 +6,7 @@ import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class DataService {
-  url = 'https://developer.nytimes.com/proxy/https/api.nytimes.com/svc/search/v2/articlesearch.json?api-key=a5b4ef08d5894312b50efe7bd28e64f7';
+  url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=01yUN8sOfW9K6sDEZgimxNRAruosNfJ9';
 
 
   constructor(private http: Http) { }
