@@ -3,8 +3,8 @@ import { element } from 'protractor';
 import { DataService } from './../data.service';
 import { Component, OnInit, Input, NgModule, OnDestroy } from '@angular/core';
 
-import { BsModalService } from 'ngx-bootstrap/modal';
-import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { BsModalService } from 'ngx-bootstrap';
+import { BsModalRef } from 'ngx-bootstrap';
 import { Subscription } from 'rxjs/Subscription';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
